@@ -14,6 +14,6 @@ This repository contains various Rust projects to help understand and explore Ru
    - A command-line calculator that takes user input for numbers and operations (`+`, `-`, `*`, `/`).
    - **Purpose**: Understand user input handling, type conversion, and basic arithmetic operations in Rust.
 
-3. **📝 To-Do List App**
+3. **📝 To-Do List App**  
    - A simple command-line to-do list manager that allows users to add, display, and save tasks to a file.
    - **Purpose**: Explore working with vectors (`Vec`), file input/output (I/O), and Rust's ownership/borrowing system.
