@@ -1,0 +1,33 @@
+pipeline:
+  name: tidbit_cd_git_experience
+  identifier: tidbit_cd_git_experience
+  projectIdentifier: project_1
+  orgIdentifier: default
+  tags:
+    tidbit: TID-0066
+    module: CD
+  stages:
+    - stage:
+        name: GitEx Demo
+        identifier: gitex_demo
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: Show Source Of Truth
+                  identifier: show_source
+                  type: ShellScript
+                  timeout: 5m
+                  spec:
+                    shell: Bash
+                    onDelegate: false
+                    source:
+                      type: Inline
+                      spec:
+                        script: |
+                          echo "This pipeline YAML lives in Git (GitEx remote entity)."
+                          echo "Repo=<+pipeline.gitConfig.repoName> Branch=<+pipeline.gitConfig.branch>"
+                    environmentVariables: []
+                    outputVariables: []
+        tags: {}
